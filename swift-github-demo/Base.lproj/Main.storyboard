@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Fraserxu's Github Repos-->
+        <!--Search Results View Controller - Fraserxu's Github Repos-->
         <scene sceneID="BOJ-Jo-Xzm">
             <objects>
-                <tableViewController id="cXe-bk-1so" customClass="ViewController" customModule="swift_github_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="cXe-bk-1so" customClass="SearchResultsViewController" customModule="swift_github_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Iwd-TS-cc8">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6D-qj-d7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379" y="419"/>
+            <point key="canvasLocation" x="423" y="419"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AjD-OV-NGe">

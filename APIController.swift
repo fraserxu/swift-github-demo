@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  APIController.swift
 //  swift-github-demo
 //
 //  Created by fraserxu on 14-6-5.
@@ -8,16 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
-    
-    @IBOutlet var appsTableView : UITableView
+protocol APIControllerProtocol {
+    func didRecieveAPIResults(results: NSArray)
+}
+
+class APIController: NSObject {
     var data: NSMutableData = NSMutableData()
-    var tableData: NSArray = NSArray()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        searchGithubFor("fraserxu");
-    }
+    var delegate: APIControllerProtocol?
     
     func searchGithubFor(searchTerm: String) {
         
@@ -35,27 +32,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         connection.start()
     }
-    
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
-    }
-    
-    
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
-        
-        var rowData: NSDictionary = self.tableData[indexPath.row] as NSDictionary
-        
-        cell.text = rowData["name"] as String
-        
-        // Get the formatted price string for display in the subtitle
-        var formattedPrice: NSString = rowData["description"] as NSString
-        
-        cell.detailTextLabel.text = formattedPrice
-        
-        return cell
-    }
-    
     
     func connection(connection: NSURLConnection!, didFailWithError error: NSError!) {
         println("Connection failed.\(error.localizedDescription)")
@@ -84,9 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var jsonResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSArray
         
         
-        self.tableData = jsonResult
-        self.appsTableView.reloadData()
+        delegate?.didRecieveAPIResults(jsonResult)
         
     }
-    
 }

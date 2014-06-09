@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		298C386819408C1C005DF69A /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298C386719408C1C005DF69A /* APIController.swift */; };
 		29FCA9071940455300C76754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FCA9061940455300C76754 /* AppDelegate.swift */; };
-		29FCA9091940455300C76754 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FCA9081940455300C76754 /* ViewController.swift */; };
+		29FCA9091940455300C76754 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FCA9081940455300C76754 /* SearchResultsViewController.swift */; };
 		29FCA90C1940455300C76754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29FCA90A1940455300C76754 /* Main.storyboard */; };
 		29FCA90E1940455300C76754 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29FCA90D1940455300C76754 /* Images.xcassets */; };
 		29FCA91A1940455400C76754 /* swift_github_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FCA9191940455400C76754 /* swift_github_demoTests.swift */; };
@@ -25,10 +26,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		298C386719408C1C005DF69A /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIController.swift; path = ../APIController.swift; sourceTree = "<group>"; };
 		29FCA9011940455300C76754 /* swift-github-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-github-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FCA9051940455300C76754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29FCA9061940455300C76754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		29FCA9081940455300C76754 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29FCA9081940455300C76754 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		29FCA90B1940455300C76754 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29FCA90D1940455300C76754 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		29FCA9131940455400C76754 /* swift-github-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-github-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,8 +77,9 @@
 		29FCA9031940455300C76754 /* swift-github-demo */ = {
 			isa = PBXGroup;
 			children = (
+				298C386719408C1C005DF69A /* APIController.swift */,
 				29FCA9061940455300C76754 /* AppDelegate.swift */,
-				29FCA9081940455300C76754 /* ViewController.swift */,
+				29FCA9081940455300C76754 /* SearchResultsViewController.swift */,
 				29FCA90A1940455300C76754 /* Main.storyboard */,
 				29FCA90D1940455300C76754 /* Images.xcassets */,
 				29FCA9041940455300C76754 /* Supporting Files */,
@@ -208,8 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29FCA9091940455300C76754 /* ViewController.swift in Sources */,
+				29FCA9091940455300C76754 /* SearchResultsViewController.swift in Sources */,
 				29FCA9071940455300C76754 /* AppDelegate.swift in Sources */,
+				298C386819408C1C005DF69A /* APIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +403,7 @@
 				29FCA91F1940455400C76754 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29FCA9201940455400C76754 /* Build configuration list for PBXNativeTarget "swift-github-demoTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +412,7 @@
 				29FCA9221940455400C76754 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
